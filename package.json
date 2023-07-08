@@ -1,0 +1,28 @@
+{
+  "name": "svg-logo-generator",
+  "version": "1.0.0",
+  "description": "A simple logo generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-brannon09/svg-logo-generator.git"
+  },
+  "author": "Adam Brannon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-brannon09/svg-logo-generator/issues"
+  },
+  "homepage": "https://github.com/adam-brannon09/svg-logo-generator#readme",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
