@@ -2,8 +2,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const {isValidColorName, isValidRGB } = require('is-valid-css-color');
 const createShapes = require('./lib/createShapes');
+const {isValidColorName, isValidRGB } = require('is-valid-css-color');
+
 
     
 
@@ -64,7 +65,7 @@ const prompts =
     ]
 
 function writeToFile(filename, data) {
-    fs.writeFile(filename, data, (err) => {
+    fs.writeFile(filename, data, err => {
         if (err) {
             console.log(err);
         }
@@ -78,10 +79,8 @@ async function init() {
     try {
         // Prompt the user for information
         const answers = await inquirer.prompt(prompts);
-        // Create the shape
-        const shape = createShapes(answers.shapeChoice, answers.shapeColor);
-        // Create the text
-        const text = createShapes('Text', answers.textColor, answers.letterChoice);
+        const shapeFile = createShapes(answers);
+        await writeFileAsync('logo.svg', shapeFile);
     } catch (err) {
         console.log(err);
     }
