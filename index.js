@@ -1,3 +1,4 @@
+//Import required modules
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
@@ -35,19 +36,26 @@ const prompts =
                 throw new Error('Please enter a valid color or hexadecimal');
             }
         },
-        {
+        { // Prompt for Shape selection
             type: 'list',
             name: 'shapeChoice',
             message: 'What shape would you like to create?',
             choices: ['Triangle', 'Square', 'Circle']
         },
-        {
-
+        { // Prompt for shape color
+            type: 'input',
+            name: 'shapeColor',
+            message: 'What color or hexadecimal would you like your shape to be?',
+            validate: function (shapeColor) {
+                if (!shapeColor) {
+                    throw new Error('Please enter a color or hexadecimal');
+                }
+                if (isValidColorName(shapeColor) || isValidHexadecimal(shapeColor)) {
+                    return true;
+                }
+                throw new Error('Please enter a valid color or hexadecimal');
+            }
 
         }
-
-
-
-
 
 ]
