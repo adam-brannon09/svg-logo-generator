@@ -23,6 +23,8 @@
     "jest": "^29.6.1"
   },
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "is-valid-css-color": "^2.0.3",
+    "validate-color": "^2.2.4"
   }
 }
