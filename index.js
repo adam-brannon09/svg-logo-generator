@@ -80,7 +80,7 @@ async function init() {
         // Prompt the user for information
         const answers = await inquirer.prompt(prompts);
         const shapeFile = createShapes(answers);
-        await writeFileAsync('logo.svg', shapeFile);
+        await writeFileAsync('examples/logo.svg', shapeFile);
     } catch (err) {
         console.log(err);
     }
