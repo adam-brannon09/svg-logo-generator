@@ -30,7 +30,7 @@ To install this application, please follow the below instructions:
 
 
 - Here is a video of the application in action:
-- [Check Out the Video Demo!]()
+- [Check Out the Video Demo!](https://drive.google.com/file/d/1iGsHd59jWUg5Lo8-9iMhl2ImJ4hxOLU3/view)
 
 
 ## Contributors
