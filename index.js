@@ -14,7 +14,7 @@ const prompts =
         { // Prompt for shape text
             type: 'input',
             name: 'letterChoice',
-            message: 'What 3 letter would you like your shape to contain?',
+            message: 'What 3 letters would you like your shape to contain?',
             // Validate that the user entered 3 letters
             validate: function (letterChoice) {
                 if (letterChoice.length !== 3) {
